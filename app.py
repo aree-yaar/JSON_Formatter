@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request, url_for, redirect
-import json
+from flask import Flask, render_template, request
+from formatter import beautify_json
 app = Flask(__name__)
 
 
@@ -7,9 +7,8 @@ app = Flask(__name__)
 def home():
     if request.method == "POST":
         input_text = request.form['input-text']
-        output_text = json.dumps(json.loads(input_text), indent = 4)
-        return render_template("home.html", output = output_text, input = input_text) 
-    return render_template('home.html', output = 'Placeholder text')    
+        return render_template("home.html", output = beautify_json(input_text, 4), input = input_text) 
+    return render_template('home.html', input = 'Enter your json here')    
 
 
 if __name__ == "__main__":

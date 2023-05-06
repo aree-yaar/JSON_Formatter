@@ -1,13 +1,25 @@
+<!DOCTYPE html>
 <html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
     <title>
         JSON Formatter
     </title>
-    <body>
-        <h2 class="header-layout"> JSON Formatter </h2>
-        <form method="post" action="/">
-            <textarea name="input-text" class="text-input" style="height: 80%; width: 30%;" >{{ input }}</textarea>
-            <button type="submit" class="format-button-layout"> Format </button>
-            <textarea class="text-output" style="height: 80%; width: 30%;">{{ output }}</textarea>
-        </form>
-    </body>
-</html> 
+</head>
+
+<body>
+    <h2 class="header-layout"> JSON Formatter </h2>
+    <form method="post" action="/">
+        <textarea name="input-text" class="text-input" style="height: 80%; width: 30%;">{{ input }}</textarea>
+        <button type="submit" name="action" value="format" class="format-button-layout"> Format </button>
+        <button type="submit" name="action" value="minify" class="format-button-layout"> Minify </button>
+        <textarea class="text-output" style="height: 80%; width: 30%;">{{ output }}</textarea>
+    </form>
+</body>
+
+</html>

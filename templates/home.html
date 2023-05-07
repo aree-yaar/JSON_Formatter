@@ -15,10 +15,11 @@
 <body>
     <h2 class="header-layout"> JSON Formatter </h2>
     <form method="post" action="/">
-        <textarea name="input-text" class="text-input" style="height: 80%; width: 30%;">{{ input }}</textarea>
+        <textarea name="input-text" class="text-input" style="height: 80%; width: 30%;" placeholder="{{ placeholder_input_text }}">{{ input }}</textarea>
         <button type="submit" name="action" value="format" class="format-button-layout"> Format </button>
         <button type="submit" name="action" value="minify" class="format-button-layout"> Minify </button>
-        <textarea class="text-output" style="height: 80%; width: 30%;">{{ output }}</textarea>
+        <button type="submit" name="action" value="download" class="format-button-layout"> Download </button>
+        <textarea name="output-text" class="text-output" style="height: 80%; width: 30%;">{{ output }}</textarea>
     </form>
 </body>
 

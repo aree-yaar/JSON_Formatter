@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    background: #ffffff;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container {
+    height: 80vh;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.inner-container {
+    display: flex;
+    height: 100%;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 1rem;
+    width: 15%;
+}
+
+.text-area {
+    width: 42.5%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #aaaaaa;
+    background: #444444;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    resize: none;
+    font-size: large;
+    font-family: monospace;
+    transition: background 0.25s, color 0.25s;
+}
+
+.text-area:hover,
+.text-area:focus {
+    background: #4a4a4a;
+}
+
+.text-area:focus {
+    color: #eeeeee;
+}
+
+.text-area[placeholder] {
+    font-size: large;
+}
+
+.control-button {
+    height: 3rem;
+    padding: 8px 14px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #009578;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "Roboto";
+}
+
+.control-button:active {
+    background: #00705a;
+}
+
+form {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.alert{
+    width: 180px;
+    height: 40px;
+    text-align: center;
+}
+
+.flash-message{
+    font-size: medium;
+}

@@ -73,9 +73,20 @@
                 <textarea name="input-text" class="text-area"
                     placeholder="{{ placeholder_input_text }}">{{ input }}</textarea>
                 <div class="button-container">
+                    <select class="dropdown"name="indent">
+                        <option value="2" selected="selected">2 Tab Space</option>
+                        <option value="3">3 Tab Space</option>
+                        <option value="4">4 Tab Space</option>
+                    </select>
                     <button type="submit" name="action" value="format" class="control-button"> Format </button>
                     <button type="submit" name="action" value="minify" class="control-button"> Minify </button>
                     <button type="submit" name="action" value="download" class="control-button"> Download </button>
+                    <select class="dropdown" name="converter">
+                        <option value="JSON">JSON</option>
+                        <option value="XML">XML</option>
+                        <option value="YAML">YAML</option>
+                        <option value="CSV">CSV</option>
+                    </select>
                 </div>
                 <textarea name="output-text" class="text-area">{{ output }}</textarea>
             </div>

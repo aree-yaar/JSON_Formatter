@@ -88,3 +88,8 @@ form {
 .flash-message{
     font-size: medium;
 }
+.dropdown{
+    border-radius: 5px;
+    text-align: center;
+    height: 25px;
+}

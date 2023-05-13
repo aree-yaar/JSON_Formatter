@@ -1,11 +1,8 @@
 import pandas as pd
 import json
 import yaml
-from dicttoxml import dicttoxml
-import xmltodict
-from json2xml import json2xml
+import dicttoxml
 from xml.dom.minidom import parseString
-
 
 def toCSV(input_json):
     info = json.loads(input_json)
@@ -18,4 +15,5 @@ def toYaml(input_json):
     return yaml_string
 
 def toXML(input_json):
-    return  xmltodict.unparse(json.loads(input_json), full_document=False, pretty = True)
+    xml =  dicttoxml.dicttoxml(json.loads(input_json), return_bytes = False, attr_type=False)
+    return parseString(xml).toprettyxml()

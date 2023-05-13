@@ -73,6 +73,12 @@
                 <textarea name="input-text" class="text-area"
                     placeholder="{{ placeholder_input_text }}">{{ input }}</textarea>
                 <div class="button-container">
+
+                    <form action = "/" method = "post" enctype="multipart/form-data">
+                        <input type="file" name="file"/>
+                        <input type="submit" value="Submit">
+                    </form>  
+
                     <select class="dropdown"name="indent">
                         <option value="2" selected="selected">2 Tab Space</option>
                         <option value="3">3 Tab Space</option>
